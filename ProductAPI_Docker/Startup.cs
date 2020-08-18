@@ -29,7 +29,7 @@ namespace ProductAPI_Docker
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var server = Configuration["DbServer"] ?? "ms-sql-server";
+            var server = Configuration["DbServer"] ?? "localhost";
             var port = Configuration["DbPort"] ?? "1433";
             var database = Configuration["Database"] ?? "Products";
             var user = Configuration["DbUser"] ?? "SA";

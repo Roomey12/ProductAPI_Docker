@@ -10,5 +10,7 @@ services:
       - "1433:1433"
   product-api:
     build: .
+    environment:
+      DbServer: "ms-sql-server"
     ports:
       - "8080:80"
